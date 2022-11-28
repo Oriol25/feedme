@@ -1,0 +1,62 @@
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+#navBar
+{
+    background-color: #201a17;
+    margin-bottom: -7px;
+}
+
+.nav-link
+{
+    color: white !important;
+}
+
+#secondHeader{
+    margin-top: 30px !important;
+    background-color: #f2e9e4 !important;
+    width: 100%;
+    height: 130px;
+    /* margin: 10px; */
+}
+
+
+#buscador
+{
+    width: 400px;
+    border-radius: 35px;
+    margin-left: 20px;
+    border: 1px solid gray;
+    text-indent: 5px;
+    outline: none;
+}
+
+#botonBuscar
+{
+    position: relative;
+    left: -30px;
+    background-color: chocolate;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 40px;
+    border: 1px solid gray;
+    transition: 0.5s;
+
+}
+
+#botonBuscar:hover
+{
+    background-color: #B533FF;
+}
+
+#links
+{
+    margin-left: 200px;
+}
+
+#scanner
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
