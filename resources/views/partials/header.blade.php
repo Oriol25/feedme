@@ -28,10 +28,13 @@
   
     <!-- Jumbotron -->
     <div class="p-5 text-center bg-light" style="margin-top: 58px;" id="secondHeader">
-      <img src="{{ asset('./assets/off-logo-horizontal-light.svg') }}" alt="">
-      <input type="search" name="" placeholder="Search for a product" id="buscador">
-      <button id="botonBuscar"><i class="fas fa-search"></i></button>
-      <button id="scanner" class="btn btn-primary">SCANNER</button>
+      <form method="POST" action="{{ route('home.searchFromApi') }}">
+        @csrf
+        <img src="{{ asset('./assets/off-logo-horizontal-light.svg') }}" alt="">
+        <input type="search" name="home_search" placeholder="Search for a product" id="buscador" maxlength="13">
+        <button id="botonBuscar" type="submit"><i class="fas fa-search"></i></button>
+        {{-- <button id="scanner" class="btn btn-primary">SCANNER</button> --}}
+      </form>
     </div>
     <!-- Jumbotron -->
 
