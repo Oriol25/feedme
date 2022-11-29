@@ -10,7 +10,20 @@
                 <div class="col-sm-6 col-md-3 my-3">
                     <div class="card">
                         <a href="#" class="text-reset text-decoration-none">
-                            <img class="card-img-top" src="https://images.openfoodfacts.org/images/products/301/762/042/2003/front_en.430.200.jpg" alt="Card image cap">
+                            <img class="card-img-top img-front" src="https://images.openfoodfacts.org/images/products/301/762/042/2003/front_en.430.200.jpg" alt="Card image cap">
+                            <div class="card-body">
+                            <h6 class="card-title text-center">Nutella - Ferrero - 400 g</h6>
+                            </div>
+                            <div class="card-footer">
+                                <img class="w-25 img-responsive" src="https://static.openfoodfacts.org/images/attributes/nutriscore-e.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 my-3">
+                    <div class="card">
+                        <a href="#" class="text-reset text-decoration-none">
+                            <img class="card-img-top img-front" src="https://images.openfoodfacts.org/images/products/073/762/806/4502/front_en.6.200.jpg" alt="Card image cap">
                             <div class="card-body">
                             <h6 class="card-title text-center">Nutella - Ferrero - 400 g</h6>
                             </div>
