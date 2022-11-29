@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\Parser\Parser;
 use App\Http\Requests\ValidateHomeSearch;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -15,12 +16,16 @@ class HomeController extends Controller
         return view('home', compact('products', 'contadorProductos'));
     }
 
-    public function searchFromApi(ValidateHomeSearch $request)
+    public function searchFromApi(Request $request)
     {
-        $api = new ApiController();
-        $content = $api->getProductByEAN($request->home_search);
-        // $content = new ApiController::getProductByEAN($request->home_search);
 
-        dd($content->parser());
+        $ean = str_pad($request->homeSearch, 13, "0", STR_PAD_LEFT);
+
+        $api = new ApiController();
+        $content = $api->getProductByEAN($ean);
+
+        $parser = new Parser($content, 'en');
+
+        dd($parser->getAllData());
     }
 }
