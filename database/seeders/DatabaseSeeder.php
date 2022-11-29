@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
 
 
         // Seeder de la tabla de alergenos
-        //$this->call(AlergenoSeeder::class);
+        // $this->call(AlergenoSeeder::class);
     }
 }

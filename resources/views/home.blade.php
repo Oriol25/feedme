@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-full bg-dark text-white py-3 ps-5">
-        <i class="fa-solid fa-magnifying-glass"></i><span class="ms-4">2,666,961 products</span>
+        <i class="fa-solid fa-magnifying-glass"></i><span class="ms-4">{{ $contadorProductos }} products</span>
     </div>
     <div class="w-full">
         <div class="container">

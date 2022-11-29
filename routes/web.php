@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('searchFromApi', [HomeController::class, 'searchFromApi'])->name('home.searchFromApi');
 
 Route::get('/api/v1/product/{ean}', [ApiController::class, 'getProductByEAN'])->name('api.product.get');
 
