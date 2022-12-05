@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->integer('quantity');
+            $table->string('quantity');
             $table->string('EAN');
             $table->unsignedBigInteger('nutriscore_grade_id');
             $table->foreign('nutriscore_grade_id')
