@@ -25,7 +25,7 @@ class HomeController extends Controller
         }
         $ean = str_pad($request->home_search, 13, "0", STR_PAD_LEFT);
 
-        $product = Product::where('EAN', $ean)->get();
+        $product = Product::where('EAN', $ean)->first();
 
         if (count($product) === 0) {
             $api = new ApiController();
@@ -37,7 +37,7 @@ class HomeController extends Controller
             $nutriscore_id = NutriscoreGrade::where('name', $data['PRODUCT_NUTRISCORE_GRADE'])->get();
             $nova_group_id = NovaGroup::where('name', $data['PRODUCT_NOVA_GROUP'])->get();
 
-            Product::create([
+            $product = Product::create([
                 'title' => $data['PRODUCT_TITLE'],
                 'quantity' => $data['PRODUCT_QUANTITY'],
                 'EAN' => $data['PRODUCT_EAN'],
@@ -46,9 +46,20 @@ class HomeController extends Controller
                 'image' => $data['REGULAR_FRONT_IMAGE'],
             ]);
 
+            $alergenos = Aleregeno::whereIn('name', $data['PRODUCT_ALLERGENS'])->get();
+            dd($alergenos);
+
+
         }
 
+        return redirect()->route("product", ['product' => $product]);
 
 
+
+    }
+
+    public function show(Product $product)
+    {
+        return view('product', ['product' => $product]);
     }
 }
