@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index() {      
+    public function index() {
         $products = Product::paginate(20);
         $contadorProductos = count($products);
 
@@ -18,7 +18,9 @@ class HomeController extends Controller
 
     public function searchFromApi(Request $request)
     {
-
+        if (!isset($request->homeSearch) && $request->homeSearch === null){
+            return redirect()->route("home");
+        }
         $ean = str_pad($request->homeSearch, 13, "0", STR_PAD_LEFT);
 
         $api = new ApiController();
