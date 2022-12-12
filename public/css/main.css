@@ -7,10 +7,10 @@ body {
     background-color: #f6f3f0;
 }
 
-.img-front {
-    width: 253px !important;
-    height: 173.297px !important;
-
-    padding: 15px;
-
+.no-selected {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
 }
+

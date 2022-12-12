@@ -20,9 +20,10 @@ class HomeController extends Controller
 
     public function searchFromApi(Request $request)
     {
-        if (!isset($request->home_search) && $request->home_search === null){
+        if (!isset($request->homeSearch) && $request->homeSearch === null){
             return redirect()->route("home");
         }
+
         $ean = str_pad($request->home_search, 13, "0", STR_PAD_LEFT);
 
         $product = Product::where('EAN', $ean)->first();
@@ -54,8 +55,9 @@ class HomeController extends Controller
 
         return redirect()->route("product", ['product' => $product]);
 
+        $parser = new Parser($content, 'en');
 
-
+        dd($parser->getAllData());
     }
 
     public function show(Product $product)
