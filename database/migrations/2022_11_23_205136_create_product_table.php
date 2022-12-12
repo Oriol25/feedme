@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('quantity');
-            $table->string('EAN');
+            $table->string('EAN')->unique();
             $table->unsignedBigInteger('nutriscore_grade_id');
             $table->foreign('nutriscore_grade_id')
                     -> references('id')
