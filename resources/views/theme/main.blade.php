@@ -6,9 +6,8 @@
         @stack('css')
     </head>
     <body>
-        <div class="header">
-            @include('partials.header')
-        </div>
+        @include('partials.header')
+        
         <div class="content">
             @yield('content')
         </div>

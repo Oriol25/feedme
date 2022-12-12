@@ -1,5 +1,9 @@
 @extends('theme.main')
 
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
+@endpush
+
 @section('content')
     <div class="w-full bg-dark text-white py-3 ps-5">
         <i class="fa-solid fa-magnifying-glass"></i><span class="ms-4">{{ $contadorProductos }} products</span>
