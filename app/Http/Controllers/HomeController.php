@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Actions\Parser\Parser;
-use App\Http\Requests\ValidateHomeSearch;
 use App\Models\NovaGroup;
 use App\Models\NutriscoreGrade;
 use App\Models\Product;
+use App\Models\Alergeno;
+use Exception;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,15 +21,16 @@ class HomeController extends Controller
 
     public function searchFromApi(Request $request)
     {
-        if (!isset($request->homeSearch) && $request->homeSearch === null){
+
+        /* if (!isset($request->home_search) && $request->home_search === null){
             return redirect()->route("home");
-        }
+        } */
 
         $ean = str_pad($request->home_search, 13, "0", STR_PAD_LEFT);
 
         $product = Product::where('EAN', $ean)->first();
 
-        if (count($product) === 0) {
+        if (!isset($product->id)) {
             $api = new ApiController();
             $content = $api->getProductByEAN($ean);
 
@@ -42,22 +44,23 @@ class HomeController extends Controller
                 'title' => $data['PRODUCT_TITLE'],
                 'quantity' => $data['PRODUCT_QUANTITY'],
                 'EAN' => $data['PRODUCT_EAN'],
-                'nutriscore_grade_id' => $nutriscore_id[0]->name ?? 1,
-                'nova_group_id' => $nova_group_id[0]->name ?? 1,
+                'nutriscore_grade_id' => $nutriscore_id[0]->id ?? 6,
+                'nova_group_id' => $nova_group_id[0]->id ?? 5,
                 'image' => $data['REGULAR_FRONT_IMAGE'],
             ]);
 
-            $alergenos = Aleregeno::whereIn('name', $data['PRODUCT_ALLERGENS'])->get();
-            dd($alergenos);
+            $alergenos = Alergeno::whereIn('name', $data['PRODUCT_ALLERGENS'])->get();
+            
+            $product->alergenos()->attach($alergenos);
 
+            
 
         }
 
-        return redirect()->route("product", ['product' => $product]);
+        //return redirect()->route("product", ['product' => $product->id]);
 
-        $parser = new Parser($content, 'en');
+        return redirect()->route('home');
 
-        dd($parser->getAllData());
     }
 
     public function show(Product $product)

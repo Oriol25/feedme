@@ -71,7 +71,7 @@ class Parser
         $data_parsed['PRODUCT_EAN'] = $this->data[self::PRODUCT_ROOT][self::PRODUCT_EAN] ?? '';
         $data_parsed['PRODUCT_BRANDS'] = $this->data[self::PRODUCT_ROOT][self::PRODUCT_BRANDS] ?? '';
         $data_parsed['PRODUCT_CATEGORIES'] = $this->data[self::PRODUCT_ROOT][self::PRODUCT_CATEGORIES] ?? '';
-        $data_parsed['PRODUCT_ALLERGENS'] = self::extractOnlySelectedLanguageTag($this->data[self::PRODUCT_ROOT][self::PRODUCT_ALLERGENS], $this->language_tag) ?? '';
+        $data_parsed['PRODUCT_ALLERGENS'] = self::extractOnlySelectedLanguageTag($this->data[self::PRODUCT_ROOT][self::PRODUCT_ALLERGENS], $this->language_tag) ?? [];
         $data_parsed['PRODUCT_INGREDIENTS_ID'] = self::extractOnlySelectedLanguageTag($this->data[self::PRODUCT_ROOT][self::PRODUCT_INGREDIENTS_ID], $this->language_tag) ?? '';
         $data_parsed['PRODUCT_INGREDIENTS_TEXT'] = $this->data[self::PRODUCT_ROOT][self::PRODUCT_INGREDIENTS_TEXT] ?? '';
         $data_parsed['PRODUCT_NUTRISCORE_GRADE'] = $this->data[self::PRODUCT_ROOT][self::PRODUCT_NUTRISCORE_GRADE] ?? '';

@@ -28,5 +28,9 @@ class Product extends Model
         return $this->belongsTo(NovaGroup::class);
     }
 
+    public function alergenos() {
+        return $this->belongsToMany(Alergeno::class, 'product_alergens');
+    }
+
 
 }

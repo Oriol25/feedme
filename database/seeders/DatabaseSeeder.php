@@ -15,9 +15,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Seeder de la tabla de alergenos
-        // $this->call(AlergenoSeeder::class);
-        //$this->call(NovaGroupSeeder::class);
-        //$this->call(NutriscoreGradeSeeder::class);
+        $this->call(AlergenoSeeder::class);
+        $this->call(NovaGroupSeeder::class);
+        $this->call(NutriscoreGradeSeeder::class);
 
     }
 }
