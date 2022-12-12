@@ -1,0 +1,27 @@
+@extends('theme.main')
+
+@push('css')
+    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
+@endpush
+
+@section('content')
+    <div id="nombre">
+        <div><h2>{{ $product->title }} - {{ $product->quantity }}</h2></div>
+        <div></h2></div>
+    </div>
+    <div id="articulo">
+            <img src="{{ $product->image }}" alt="">
+            <div id="contentProduct">
+                <h2>{{ $product->title }} - {{ $product->quantity }}</h2>
+                <p><strong>EAN:</strong> {{ $product->EAN }}</p>
+                <p><strong>Quantity:</strong> {{ $product->quantity }}</p>
+                <p><strong>Nutriscore Grade:</strong> {{ $product->nutriscoreGrade->name }}</p>
+                <p><strong>Nova Group:</strong> {{ $product->novaGroup->name }}</p>
+            </div>
+    </div>
+    <div id="matching">
+        <h2>Matching with your preferences</h2>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+@endsection
