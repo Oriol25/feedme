@@ -26,6 +26,13 @@
     height: 100%;
 }
 
+#header ul li a {
+    text-decoration: none;
+}
+
+#header ul li a:visited{
+   color: white;
+}
 #header li:hover{
     color: chocolate;
     font-size: 22px;

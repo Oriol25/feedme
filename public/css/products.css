@@ -1,7 +1,14 @@
+.card-size {
+    min-width: 250px !important;
+    height: 300px;
+}
+
+.list_product_img_div
+{
+    max-height: 114px !important;
+    object-fit: contain;
+}
+
 .img-front {
-    width: 253px !important;
-    height: 173.297px !important;
-
     padding: 15px;
-
 }

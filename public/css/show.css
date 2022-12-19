@@ -3,40 +3,65 @@
     background-color: rgb(231, 227, 222);
 } */
 #nombre{
-    height: 200px;
-    line-height: 100px;
     display: flex;
-    width: 100%;
-    height: 100px;
+    height: 180px;
+    width: 100vw;
     background-color: rgba(41, 171, 223, 0.2);
-    justify-content: space-around;
+
+}
+
+#nombre div {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 #nombre h2{
+    line-height: 100px;
     margin: 0;
-    font-size: 20px;
+    font-size: 25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#articulo{
-    margin: auto;
-    display: flex;
-    position: relative;
-    border-radius: 25px;
-    box-shadow: 2px 2px 2px 2px gainsboro;
-    top: -40px;
-    width: 65%;
-    background-color: white;
-    height: 400px;
+#articulo > div {
+    width: 50%;
 }
 
-#matching{
-    margin: auto;
-    margin-top: 30px;
+#articulo{
     position: relative;
+    top: -130px;
+    margin: 2em auto;
+    padding: 2em;
+    display: flex;
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px gainsboro;
-    top: -40px;
+    width: 70%;
+    background-color: white;
+    max-height: 400px;
+}
+
+#articulo img{
+    border-radius: 15px;
+    height: 100%;
+    object-fit: contain;
+}
+
+#articulo #contentProduct{
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 40px;
+}
+
+#articulo p{
+    font-size: 15px;
+    display: table;
+}
+
+
+#matching{
+    margin: 2em auto;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px gainsboro;
     width: 65%;
     background-color: white;
     height: 210px;
@@ -48,25 +73,7 @@
     font-size: 30px;
 }
 
-#articulo img{
-    margin-top: 35px;
-    margin-left: 60px;
-    border-radius: 15px;
-    width: 350px;
-    height: 230px;
-}
 
-#articulo div{
-    
-    font-size: 35px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 40px;
-}
-
-#articulo p{
-    font-size: 15px;
-    display: table;
-}
 .box{
     display: inline-block;
     margin: 20px;

@@ -1,7 +1,7 @@
 <div id="header">
     <ul>
-        <li><a>HOME</a></li>
-        <li><a>PRODUCTS</a></li>
+        <li><a href="{{ route('home') }}">HOME</a></li>
+        {{-- <li><a>PRODUCTS</a></li> --}}
     </ul>
 </div>
 <div id="secondHeader">
