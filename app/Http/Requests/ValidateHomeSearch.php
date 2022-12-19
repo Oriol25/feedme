@@ -24,7 +24,7 @@ class ValidateHomeSearch extends FormRequest
     public function rules()
     {
         return [
-            'home_search' => 'integer'
+            'home_search' => 'required|integer'
         ];
     }
 

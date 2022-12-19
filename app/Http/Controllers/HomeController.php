@@ -9,6 +9,7 @@ use App\Models\Product;
 use App\Models\Alergeno;
 use Exception;
 use Illuminate\Http\Request;
+use App\Http\Requests\ValidateHomeSearch;
 
 class HomeController extends Controller
 {
@@ -19,22 +20,26 @@ class HomeController extends Controller
         return view('home', compact('products', 'contadorProductos'));
     }
 
-    public function searchFromApi(Request $request)
+    public function searchFromApi(ValidateHomeSearch $request)
     {
 
         /* if (!isset($request->home_search) && $request->home_search === null){
             return redirect()->route("home");
         } */
-
+        
         $ean = str_pad($request->home_search, 13, "0", STR_PAD_LEFT);
 
         $product = Product::where('EAN', $ean)->first();
-
         if (!isset($product->id)) {
             $api = new ApiController();
+            
             $content = $api->getProductByEAN($ean);
-
+            $response = json_decode($content, true);
+            if($response == null) {
+                return redirect()->route('home');
+            }
             $parser = new Parser($content, 'en');
+
             $data = $parser->getAllData();
 
             $nutriscore_id = NutriscoreGrade::where('name', $data['PRODUCT_NUTRISCORE_GRADE'])->get();
@@ -56,7 +61,6 @@ class HomeController extends Controller
             
 
         }
-
         return redirect()->route("show.product", compact('product'));
 
     }

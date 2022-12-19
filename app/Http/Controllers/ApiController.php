@@ -17,7 +17,7 @@ class ApiController extends Controller
     public function getProductByEAN(string $ean): PromiseInterface|\Illuminate\Http\Client\Response|Response
     {
         if ($this->validateEANCode($ean)) {
-            $response = Http::acceptJson()->get("https://world.openfoodfacts.org/api/v0/product/$ean.json");
+            $response = Http::withoutVerifying()->acceptJson()->get("https://world.openfoodfacts.org/api/v0/product/$ean.json");
             return $this->verifyResponseStatus($response);
         }
         return new Response(self::HTTP_BAD_REQUEST, Response::HTTP_BAD_REQUEST, ['content-type' => 'text/html']);
