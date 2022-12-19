@@ -57,9 +57,7 @@ class HomeController extends Controller
 
         }
 
-        //return redirect()->route("product", ['product' => $product->id]);
-
-        return redirect()->route('home');
+        return redirect()->route("show.product", compact('product'));
 
     }
 
