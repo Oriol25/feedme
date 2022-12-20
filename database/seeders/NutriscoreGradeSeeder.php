@@ -46,8 +46,8 @@ class NutriscoreGradeSeeder extends Seeder
         DB::table('nutriscore_grade')->insert([
             'name' => 'E',
             'color' => 'df1f1f',
-            'img' => '/images',
-            'key' => 'https://static.openfoodfacts.org/images/attributes/nutriscore-e.svg'
+            'img' => 'https://static.openfoodfacts.org/images/attributes/nutriscore-e.svg',
+            'key' => 'E'
         ]);
 
         DB::table('nutriscore_grade')->insert([
