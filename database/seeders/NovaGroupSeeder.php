@@ -19,7 +19,7 @@ class NovaGroupSeeder extends Seeder
           'name' => 'Nova 1',
           'description' => 'Unprocessed or minimally processed foods',
           'color' => '00FF00',
-          'img' => '/images',
+          'img' => 'https://static.openfoodfacts.org/images/attributes/nova-group-1.svg',
           'key' => 1
         ]);
 
@@ -27,7 +27,7 @@ class NovaGroupSeeder extends Seeder
             'name' => 'Nova 2',
             'description' => 'Processed culinary ingredients',
             'color' => 'ffff00',
-            'img' => '/images',
+            'img' => 'https://static.openfoodfacts.org/images/attributes/nova-group-2.svg',
             'key' => 2
         ]);
 
@@ -35,7 +35,7 @@ class NovaGroupSeeder extends Seeder
             'name' => 'Nova 3',
             'description' => 'Processed foods',
             'color' => 'ff6600',
-            'img' => '/images',
+            'img' => 'https://static.openfoodfacts.org/images/attributes/nova-group-3.svg',
             'key' => 3
         ]);
 
@@ -43,7 +43,7 @@ class NovaGroupSeeder extends Seeder
             'name' => 'Nova 4',
             'description' => 'ultra processed food and drink products',
             'color' => 'ff0000',
-            'img' => '/images',
+            'img' => 'https://static.openfoodfacts.org/images/attributes/nova-group-4.svg',
             'key' => 4
         ]);
 
@@ -51,7 +51,7 @@ class NovaGroupSeeder extends Seeder
             'name' => 'Unknown',
             'description' => 'Unknown',
             'color' => 'b3b3b3',
-            'img' => '/images',
+            'img' => 'https://static.openfoodfacts.org/images/attributes/nova-group-unknown.svg',
             'key' => 5
         ]);
     }

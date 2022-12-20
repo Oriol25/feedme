@@ -22,7 +22,7 @@
                                 <h6 class="card-title text-center">{{ $product->title }} - {{ $product->quantity }}</h6>
                                 </div>
                                 <div class="card-footer">
-                                    <img class="w-25 img-responsive" src="https://static.openfoodfacts.org/images/attributes/nutriscore-e.svg" alt="">
+                                    <img class="w-25 img-responsive" src="{{ $product->nutriscoreGrade->img }}" alt="">
                                 </div>
                             </a>
                         </div>

@@ -12,7 +12,7 @@
     </div>
     <div id="articulo">
         <div class="img-layout d-flex justify-content-center">
-            <img src="{{ $product->image }}"">
+            <img src="{{ $product->image }}">
         </div>
         <div id="contentProduct">
             <h2>{{ $product->title }} - {{ $product->quantity }}</h2>
@@ -24,7 +24,7 @@
     </div>
     <div id="matching">
         <h2>Matching with your preferences</h2>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box"><img src="{{ $product->nutriscoreGrade->img }}"></div>
+        <div class="box"><img src="{{ $product->novaGroup->img }}"></div>
     </div>
 @endsection
