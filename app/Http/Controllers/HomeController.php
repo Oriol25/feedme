@@ -41,9 +41,10 @@ class HomeController extends Controller
             $parser = new Parser($content, 'en');
 
             $data = $parser->getAllData();
+            // dd($data);
 
             $nutriscore_id = NutriscoreGrade::where('name', $data['PRODUCT_NUTRISCORE_GRADE'])->get();
-            $nova_group_id = NovaGroup::where('name', $data['PRODUCT_NOVA_GROUP'])->get();
+            $nova_group_id = NovaGroup::where('key', $data['PRODUCT_NOVA_GROUP'])->get();
 
             $product = Product::create([
                 'title' => $data['PRODUCT_TITLE'],
