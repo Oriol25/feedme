@@ -59,12 +59,14 @@
 
 
 #matching{
-    margin: 2em auto;
+    position: relative;
+    top: -130px;
+    margin: 0 auto;
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px gainsboro;
     width: 65%;
     background-color: white;
-    height: 210px;
+    padding: 20px 40px;
 }
 
 #matching h2{
@@ -78,9 +80,8 @@
     display: inline-block;
     margin: 20px;
     border-radius: 10px;
-    width: 450px;
-    height: 100px;
-    background-color: rgb(248, 218, 218);
+    padding: 2em;
+    /* background-color: rgb(248, 218, 218); */
 }
 
 .box:hover{
