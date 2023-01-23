@@ -24,11 +24,14 @@
             <h1>Feed Me</h1>
             <p>Una base de dades, per veure els alergens dels teus aliments</p>
             <ul class="row nav">
-                <li class="col"><a href="#" class="text-white">Legal</a></li>
-                <li class="col"><a href="#" class="text-white">Terms of use</a></li>
-                <li class="col"><a href="#" class="text-white">Data, API and SDKs</a></li>
-                <li class="col"><a href="#" class="text-white">Donate to FeedMe</a></li>
-                <li class="col"><a href="#" class="text-white">Producers</a></li>
+                <li class="col"><a href="#" class="text-white text-decoration-none">Legal</a></li>
+                <li class="col"><a href="#" class="text-white text-decoration-none">Terms of use</a></li>
+                <li class="col"><a href="#" class="text-white text-decoration-none">Data, API and SDKs</a></li>
+                <li class="col"><a href="#" class="text-white text-decoration-none">Donate to FeedMe</a></li>
+                <li class="col"><a href="#" class="text-white text-decoration-none">Producers</a></li>
+                <a class="text-decoration-none" style="color: slategray; cursor: default;"
+                    href="https://www.flaticon.es/iconos-gratis/pizza" title="pizza iconos">Pizza iconos creados por
+                    Freepik - Flaticon</a>
             </ul>
         </div>
     </div>
