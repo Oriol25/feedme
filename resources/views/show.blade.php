@@ -17,7 +17,8 @@
         <div id="contentProduct">
             <h2>{{ $product->title }} - {{ $product->quantity }}</h2>
             <p><strong>EAN:</strong> {{ $product->EAN }}</p>
-            <p><strong>Quantity:</strong> {{ $product->quantity }}</p>
+            <p><strong>Quantitat:</strong> {{ $product->quantity }}</p>
+            <p><strong>Al·lèrgens:</strong> {{ $alergenos }}</p>
             <p><strong>Nutriscore Grade:</strong> {{ $product->nutriscoreGrade->name }}</p>
             <p><strong>Nova Group:</strong> {{ $product->novaGroup->name }}</p>
         </div>

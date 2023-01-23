@@ -13,7 +13,8 @@ use App\Http\Requests\ValidateHomeSearch;
 
 class HomeController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $products = Product::paginate(20);
         $contadorProductos = count($products);
 
@@ -26,16 +27,16 @@ class HomeController extends Controller
         /* if (!isset($request->home_search) && $request->home_search === null){
             return redirect()->route("home");
         } */
-        
+
         $ean = str_pad($request->home_search, 13, "0", STR_PAD_LEFT);
 
         $product = Product::where('EAN', $ean)->first();
         if (!isset($product->id)) {
             $api = new ApiController();
-            
+
             $content = $api->getProductByEAN($ean);
             $response = json_decode($content, true);
-            if($response == null) {
+            if ($response == null) {
                 return redirect()->route('home');
             }
             $parser = new Parser($content, 'en');
@@ -56,18 +57,18 @@ class HomeController extends Controller
             ]);
 
             $alergenos = Alergeno::whereIn('name', $data['PRODUCT_ALLERGENS'])->get();
-            
+
             $product->alergenos()->attach($alergenos);
-
-            
-
         }
-        return redirect()->route("show.product", compact('product'));
 
+        return redirect()->route("show.product", compact('product'));
     }
 
     public function show(Product $product)
     {
-        return view('show', compact('product'));
+
+        $alergenos = implode(", ", $product->alergenos->pluck("name")->toArray());
+
+        return view('show', compact('product', 'alergenos'));
     }
 }
