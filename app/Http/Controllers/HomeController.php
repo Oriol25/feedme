@@ -61,10 +61,10 @@ class HomeController extends Controller
             $product->alergenos()->attach($alergenos);
         }
 
-        return redirect()->route("show.product", compact('product'));
+        return redirect()->route("show.product")->with("name", $product->name)->with("code", $product->EAN)->with("product", $product->id);
     }
 
-    public function show(Product $product)
+    public function show($name = null, $code = null, Product $product)
     {
 
         $alergenos = implode(", ", $product->alergenos->pluck("name")->toArray());

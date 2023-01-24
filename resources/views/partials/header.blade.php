@@ -1,15 +1,9 @@
-<div id="header">
-    <ul>
-        <li><a href="{{ route('home') }}">HOME</a></li>
-        {{-- <li><a>PRODUCTS</a></li> --}}
-    </ul>
-</div>
 <div id="secondHeader">
-    <div class="d-flex gap-3">
+    <a href="{{ route('home') }}" class="text-decoration-none d-flex gap-3 text-dark">
         <img class="no-selected align-self-center" width="32px" height="32px" src="{{ asset('./assets/logo.png') }}"
             alt="">
         <h1 class="align-self-center">Fe<span class="text-warning font-italic">ED</span>me</h1>
-    </div>
+    </a>
     <div>
         <form method="POST" action="{{ route('home.searchFromApi') }}">
             @csrf
@@ -17,6 +11,6 @@
             <button id="search" type="submit"><i class="fas fa-search"></i></button>
         </form>
     </div>
-    <button id="scanner">SCANNER</button>
+    <button id="scanner" class="d-none">SCANNER</button>
 
 </div>

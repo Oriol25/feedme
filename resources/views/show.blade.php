@@ -24,7 +24,7 @@
         </div>
     </div>
     <div id="matching">
-        <h2>Matching with your preferences</h2>
+        <h2>Etiquetes</h2>
         <div class="box"><img src="{{ $product->nutriscoreGrade->img }}"></div>
         <div class="box"><img src="{{ $product->novaGroup->img }}"></div>
     </div>

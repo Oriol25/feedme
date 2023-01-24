@@ -1,5 +1,5 @@
 <footer>
-    <div id="footer1" class="rounded" style="background-color: rgb(255, 229, 199); padding: 40px;">
+    <div id="footer1" class="rounded mt-5" style="background-color: rgb(255, 229, 199); padding: 40px;">
         <div class="row align-items-start">
             <div class="col">
                 <h4> Join the community </h4>
@@ -16,23 +16,10 @@
                 <button style="margin:5px" class="btn btn-light"> Qui Som Feed Me </button>
                 <button style="margin:5px" class="btn btn-light"> Visió, Missió, Valors i Programes </button>
                 <button style="margin:5px" class="btn btn-light"> Preguntes Freqüents </button>
-            </div>
-        </div>
-    </div>
-    <div id="footer2" style="background-color: slategray;padding: 30px;">
-        <div class="text-center text-white">
-            <h1>Feed Me</h1>
-            <p>Una base de dades, per veure els alergens dels teus aliments</p>
-            <ul class="row nav">
-                <li class="col"><a href="#" class="text-white text-decoration-none">Legal</a></li>
-                <li class="col"><a href="#" class="text-white text-decoration-none">Terms of use</a></li>
-                <li class="col"><a href="#" class="text-white text-decoration-none">Data, API and SDKs</a></li>
-                <li class="col"><a href="#" class="text-white text-decoration-none">Donate to FeedMe</a></li>
-                <li class="col"><a href="#" class="text-white text-decoration-none">Producers</a></li>
-                <a class="text-decoration-none" style="color: slategray; cursor: default;"
+                <a class="text-decoration-none" style="color: rgb(255, 229, 199); cursor: default;"
                     href="https://www.flaticon.es/iconos-gratis/pizza" title="pizza iconos">Pizza iconos creados por
                     Freepik - Flaticon</a>
-            </ul>
+            </div>
         </div>
     </div>
 </footer>
