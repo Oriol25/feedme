@@ -10,11 +10,35 @@ use App\Models\Alergeno;
 use Exception;
 use Illuminate\Http\Request;
 use App\Http\Requests\ValidateHomeSearch;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
     public function index()
     {
+
+        $string_xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        $final_string_xml = '</urlset>';
+        $products = Product::all();
+
+        $string_xml .= '<url>';
+        $string_xml .= '<loc>' . route('home') . '</loc>';
+        $string_xml .= '<lastmod>' . Carbon::now()->format("Y-m-d") . '</lastmod>';
+        $string_xml .= '<changefreq>monthly</changefreq>';
+        $string_xml .= '</url>';
+
+        foreach ($products as $product) {
+            $string_xml .= '<url>';
+            $string_xml .= '<loc>' . route('show.product', ['name' => $product->title, 'code' => $product->EAN, 'product' => $product->id]) . '</loc>';
+            $string_xml .= '<lastmod>' . Carbon::create($product->updated_at)->format("Y-m-d") . '</lastmod>';
+            $string_xml .= '<changefreq>monthly</changefreq>';
+            $string_xml .= '</url>';
+        }
+
+        $string_xml .= $final_string_xml;
+
+        //dd($string_xml);
+
         $products = Product::paginate(20);
         $contadorProductos = count($products);
 
