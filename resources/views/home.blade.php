@@ -15,7 +15,8 @@
                                 class="text-reset text-decoration-none">
                                 <div class="list_product_img_div">
                                     <img class="card-img-top img-front list_product_img_div" src="{{ $product->image }}"
-                                        alt="{{ $product->title }}">
+                                        alt="{{ $product->title }}"
+                                        longdesc="{{ $product->title }} - {{ $product->quantity }}">
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title text-center">{{ $product->title }} - {{ $product->quantity }}</h6>
