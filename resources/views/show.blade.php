@@ -12,7 +12,7 @@
     </div>
     <div id="articulo">
         <div class="img-layout d-flex justify-content-center">
-            <img src="{{ $product->image }}">
+            <img src="{{ $product->image }}" alt="{{ $product->title }}">
         </div>
         <div id="contentProduct">
             <h2>{{ $product->title }} - {{ $product->quantity }}</h2>
@@ -25,7 +25,8 @@
     </div>
     <div id="matching">
         <h2>Etiquetes</h2>
-        <div class="box"><img src="{{ $product->nutriscoreGrade->img }}"></div>
-        <div class="box"><img src="{{ $product->novaGroup->img }}"></div>
+        <div class="box"><img src="{{ $product->nutriscoreGrade->img }}"
+                alt="Nutriscore Grade: {{ $product->nutriscoreGrade->name }}"></div>
+        <div class="box"><img src="{{ $product->novaGroup->img }}" alt="{{ $product->novaGroup->name }}"></div>
     </div>
 @endsection
