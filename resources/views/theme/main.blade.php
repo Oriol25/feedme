@@ -8,16 +8,17 @@
 </head>
 
 <body>
-    @include('partials.header')
+    <div id="container">
+        @include('partials.header')
 
-    <div class="content">
         @yield('content')
+        
+
+        @include('partials.footer')
+
+        @include('partials.js')
+        @stack('js')
     </div>
-
-    @include('partials.footer')
-
-    @include('partials.js')
-    @stack('js')
 </body>
 
 </html>

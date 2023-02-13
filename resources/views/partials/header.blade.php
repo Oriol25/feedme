@@ -2,13 +2,13 @@
     <a href="{{ route('home') }}" class="text-decoration-none d-flex gap-3 text-dark">
         <img class="no-selected align-self-center" width="32px" height="32px" src="{{ asset('./assets/logo.png') }}"
             alt="">
-        <h1 class="align-self-center">Fe<span class="text-warning font-italic">ED</span>me</h1>
+        <h1 class="align-self-center">Fe<span class="font-italic" style="color: rgb(127, 84, 4); font-weight: bold">ED</span>me</h1>
     </a>
     <div>
         <form method="POST" action="{{ route('home.searchFromApi') }}">
             @csrf
             <input type="search" name="home_search" placeholder="Busca un producto" id="searcher" maxlength="13">
-            <button id="search" type="submit"><i class="fas fa-search"></i></button>
+            <button id="search" type="submit"><i class="fas fa-search" style="color: white"></i></button>
         </form>
     </div>
     <button id="scanner" class="d-none">SCANNER</button>

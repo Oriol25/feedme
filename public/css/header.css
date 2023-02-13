@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
+    /* width: 100vw; */
     padding: 20px 0;
     background-color: #f2e9e4;
 
@@ -16,7 +16,7 @@
     width: 340px;
     height: 32px;
     border-radius: 10px;
-    border: 1px solid #777;
+    border: none;
     text-indent: 10px;
     outline: none;
 

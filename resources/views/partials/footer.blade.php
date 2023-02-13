@@ -16,9 +16,6 @@
                 <button style="margin:5px" class="btn btn-light"> Qui Som Feed Me </button>
                 <button style="margin:5px" class="btn btn-light"> Visió, Missió, Valors i Programes </button>
                 <button style="margin:5px" class="btn btn-light"> Preguntes Freqüents </button>
-                <a class="text-decoration-none" style="color: rgb(255, 229, 199); cursor: default;"
-                    href="https://www.flaticon.es/iconos-gratis/pizza" title="pizza iconos">Pizza iconos creados por
-                    Freepik - Flaticon</a>
             </div>
         </div>
     </div>

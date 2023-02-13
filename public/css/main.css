@@ -7,6 +7,12 @@ body {
     background-color: #f6f3f0;
 }
 
+#container{
+    margin: auto;
+    width: 1400px;
+    padding: 10px;
+}
+
 .no-selected {
     -webkit-user-select: none;
     -moz-user-select: none;
