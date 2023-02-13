@@ -18,7 +18,7 @@
                                         <img class="card-img-top img-front list_product_img_div" src="{{ $product->image }}"
                                             alt="{{ $product->title }}">
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column justify-content-center">
                                         <h6 class="card-title text-center">{{ $product->title }} - {{ $product->quantity }}
                                         </h6>
                                     </div>
