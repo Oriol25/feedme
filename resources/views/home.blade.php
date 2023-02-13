@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row mx-auto">
                 @foreach ($products as $product)
-                    <div class="col-sm-6 col-md-3 my-3">
+                    <div class="col-md-3 col-sm-6 col-xs-12 my-3">
                         <div class="card card-size">
                             <a href="{{ route('show.product', ['name' => $product->title, 'code' => $product->EAN, 'product' => $product->id]) }}"
                                 class="text-reset text-decoration-none">
