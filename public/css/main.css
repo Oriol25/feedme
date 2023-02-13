@@ -9,8 +9,12 @@ body {
 
 #container{
     margin: auto;
-    width: 1400px;
     padding: 10px;
+}
+
+.container-size {
+    max-width: 1400px;
+    width: 80vw;
 }
 
 .no-selected {
