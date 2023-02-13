@@ -8,6 +8,38 @@
     height: 100%;
 }
 
+.card-size .card-body h6 {
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    overflow: visible !important;
+    width: 80%;
+    height: auto;
+    white-space: pre-wrap;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1000;
+    top: 67%;
+    left: 10%;
+
+}
+
+.card-size .card-body h6:hover .tooltiptext {
+    visibility: visible;
+    overflow: visible !important;
+}
+
 .card-size a > div {
     height: 100%;
 }

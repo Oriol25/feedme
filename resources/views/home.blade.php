@@ -19,8 +19,13 @@
                                             alt="{{ $product->title }}">
                                     </div>
                                     <div class="card-body d-flex flex-column justify-content-center">
-                                        <h6 class="card-title text-center">{{ $product->title }} - {{ $product->quantity }}
+                                        <h6 class="card-title text-center">
+                                            {{ $product->title }} -
+                                            {{ $product->quantity }}
+                                            <span class="tooltiptext">{{ $product->title }} -
+                                                {{ $product->quantity }}</span>
                                         </h6>
+
                                     </div>
                                     <div class="card-footer">
                                         <img class="w-25 img-responsive" src="{{ $product->nutriscoreGrade->img }}"
