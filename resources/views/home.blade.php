@@ -15,16 +15,16 @@
                                 class="text-reset text-decoration-none">
                                 <div class="list_product_img_div">
                                     <img class="card-img-top img-front list_product_img_div" src="{{ $product->image }}"
-                                        alt="Card image cap">
+                                        alt="{{ $product->title }}">
                                 </div>
                                 <div class="card-body">
                                     <h6 class="card-title text-center">{{ $product->title }} - {{ $product->quantity }}</h6>
                                 </div>
                                 <div class="card-footer">
                                     <img class="w-25 img-responsive" src="{{ $product->nutriscoreGrade->img }}"
-                                        alt="">
+                                        alt="Nutriscore Grade: {{ $product->nutriscoreGrade->name }}">
                                     <img class="img-responsive" width="16px" src="{{ $product->novaGroup->img }}"
-                                        alt="">
+                                        alt="{{ $product->novaGroup->name }}">
                                 </div>
                             </a>
                         </div>
