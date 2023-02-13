@@ -8,6 +8,9 @@
     padding-left: 0px;
 }
 
+#footer div div:first-child h4, #footer ul li {
+    text-align: right;
+}
 #footer button {
     margin: 5px;
 }
